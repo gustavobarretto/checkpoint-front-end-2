@@ -1,4 +1,4 @@
-# checkpoint-front-end-2
+# Checkpoint - Front-end 2
 
 ## Objetivo
 
