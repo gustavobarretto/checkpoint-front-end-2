@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+/* Tamanhos padrões de header, footer e container */
+
+
+
+header {
+    background-color: #F2F2F2;
+    top: 0px;
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+
+    align-items: center;
+    justify-content:flex-end;
+
+}
+
+header h1 {
+    padding-right: 20px;
+}
+
+header img {
+    width: 4vw;
+    height: 8vh;
+    margin-right: 25px;
+
+}
+
+footer {
+    background-color: #817f7f;
+    padding: 60px;
+    width: 100vw;
+    display: flex;
+}
+
+.container {
+    background-color: #f2aa80;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+/* Formulário */
+
+form {
+    background-color: white;
+    width: 40vw;
+
+    margin: 3.2rem;
+    padding: 1.6rem;
+    border-radius: 5px;
+    
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+form h2 {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    font-size: 2.8vw;
+    color: #301318;
+}
+
+select {
+    border-style: none;
+    border: solid 1px #BF4D0B;
+    width: 30vw;
+    margin-top: 0.8rem;
+    padding: .4rem;
+    border-radius: 5px;
+    border-color: #BF4D0B;
+    color: #301318;
+    font-size: 1.5vw;
+    
+}
+
+select:focus {
+    outline-style: none;
+}
+
+label {
+    margin: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1.5vw;
+    color: #301318;
+}
+
+input {
+    border: none;
+    border-bottom: solid 1px #BF4D0B;
+    width: 30vw;
+    background-color: inherit;
+    outline-style: none;
+    margin-top: 0.8rem;
+    padding: 0.2rem;
+    font-weight: 500;
+    font-size: 1.2vw;
+    
+}
+
+input:focus {
+    border-color: #B5BF69;
+    border: solid 1px #B5BF69;
+    border-radius: 5px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: .05rem;
+}
+
+.ingredientes-texto {
+    margin-bottom: 0.8rem;
+    margin-top: 1rem;
+}
+
+textarea {
+    resize: none;
+    background-color: inherit;
+    border-radius: 5px;
+    outline-style: none;
+    width: 30vw;
+    padding: 0.4rem;
+    border-color: #BF4D0B;
+    font-weight: 500;
+    font-size: 1.2vw;
+
+}
+
+textarea:focus {
+    
+    font-style: italic;
+    font-weight: 500;
+}
+
+
+button {
+    margin: 1.2rem;
+    padding: 0.6rem;
+    width: 7vw;
+    background-color: #BF4D0B;
+    border: none;
+    border-radius: 5px;
+    color: #F2F2F2;
+    font-size: 1.5vw
+}
+
+button:hover {
+    background-color:#B5BF69;
+    color: #a34d1b ;
+}
+
+/* Estrutura da imagem a aparecer mediante js */
+
+.imagem {
+    background-color: #f2aa80;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.imagem img {
+    margin: 1.6rem;
+    width: 50vw;
+}
+
+.imagem p {
+    width: 50vw;
+    margin: 1.6rem auto;
+    font-weight: 600;
+    font-size: 1.5vw;
+
+}
+
+
+/* de 280 a 640px */
+
+
+@media (min-width: 280px) and (max-width: 639px) {
+    
+    header {
+        padding: 25px;
+
+    }
+
+    form {
+        width: 100vw;
+        border-radius: 0;
+        padding-top: 0;
+
+        
+    }
+
+    form h2 {
+        font-size: 6vw;
+    }
+
+    label, input {
+        font-size: 4vw;
+    }
+
+    input {
+        width: 70vw;
+    }
+
+    select {
+        width: 70vw;
+        font-size: 4vw;
+    }
+
+    textarea {
+        width: 70vw;
+        height: 20vh;
+        font-size: 3vw;
+    }
+
+    button {
+        font-size: 4vw;
+        width: 20vw;
+    }
+
+    .container {
+        background-color: white;
+
+        
+    }
+
+    .imagem img {
+        width: 100vw;
+    }
+
+    .imagem p {
+        font-size: 4vw;
+        margin: 0;
+        width: 95vw;
+        margin-bottom: 20px;
+
+    }
+
+    footer {
+        padding: 25px;
+    }
+   
+}
+
+/* Media Queries de 640 a 1024px */
+
+@media (min-width: 640px) and (max-width: 1024px) {
+    header {
+        padding: 40px;
+    }
+
+    form {
+        width: 70vw;
+    }
+
+    form h2 {
+        font-size: 4vw;
+    }
+
+    label, input, textarea {
+        font-size: 3vw;
+    }
+
+    input, select, textarea {
+        width: 50vw;
+    }
+
+    select {
+        font-size: 2.5vw;
+    }
+
+    button {
+        width: 15vw;
+        font-size: 2vw;
+
+    }
+
+
+    .imagem img {
+        width: 100vw;
+    }
+
+    .imagem p {
+        font-size: 2.5vw;
+    }
+
+
+}
+
+@media (min-width: 1366px) and (max-width: 1920px) {
+    header {
+        background-color: #F2F2F2;
+        top: 0px;
+        width: 100vw;
+        
+    }
+    
+    footer {
+        background-color: #817f7f;
+        padding: 60px;
+        width: 100vw;
+        display: flex;
+    }
+    
+    .container {
+        background-color: #f2aa80;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    /* Formulário */
+    
+    form {
+        background-color: white;
+        width: 35vw;
+    
+        margin: 3.2rem;
+        padding: 1.6rem;
+        border-radius: 5px;
+        
+    
+        display: flex;
+        flex-direction: column;
+    
+        align-items: center;
+    
+    }
+    
+    form h2 {
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+        font-size: 1.8vw;
+        color: #301318;
+    }
+    
+    select {
+        border-style: none;
+        border: solid 1px #BF4D0B;
+        width: 25vw;
+        margin-top: 0.8rem;
+        padding: .4rem;
+        border-radius: 5px;
+        border-color: #BF4D0B;
+        color: #301318;
+        font-size: 1vw;
+        
+    }
+    
+    select:focus {
+        outline-style: none;
+    }
+    
+    label {
+        margin: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        font-size: 1vw;
+        color: #301318;
+    }
+    
+    input {
+        border: none;
+        border-bottom: solid 1px #BF4D0B;
+        width: 25vw;
+        background-color: inherit;
+        outline-style: none;
+        margin-top: 0.8rem;
+        padding: 0.2rem;
+        font-weight: 500;
+        font-size: 1.2vw;
+        
+    }
+    
+    input:focus {
+        border-color: #B5BF69;
+        border: solid 1px #B5BF69;
+        border-radius: 5px;
+        font-style: italic;
+        font-weight: 500;
+        letter-spacing: .05rem;
+    }
+    
+    .ingredientes-texto {
+        margin-bottom: 0.8rem;
+        margin-top: 1rem;
+    }
+    
+    textarea {
+        resize: none;
+        background-color: inherit;
+        border-radius: 5px;
+        outline-style: none;
+        width: 25vw;
+        padding: 0.4rem;
+        border-color: #BF4D0B;
+        font-weight: 500;
+        font-size: 1vw;
+    
+    }
+    
+    textarea:focus {
+        
+        font-style: italic;
+        font-weight: 500;
+    }
+    
+    
+    button {
+        margin: 1.2rem;
+        padding: 0.6rem;
+        width: 7vw;
+        background-color: #BF4D0B;
+        border: none;
+        border-radius: 5px;
+        color: #F2F2F2;
+        font-size: 1vw
+    }
+    
+    button:hover {
+        background-color:#B5BF69;
+        color: #a34d1b ;
+    }
+    
+    /* Estrutura da imagem a aparecer mediante js */
+    
+    .imagem {
+        background-color: #f2aa80;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    
+    .imagem img {
+        margin: 1.6rem;
+        max-width: 50vw;
+    }
+    
+    .imagem p {
+        width: 40vw;
+        margin: 1.6rem auto;
+        font-weight: 600;
+        font-size: 1.5vw;
+        padding: 1rem;
+        
+        justify-self: center;
+    
+    }
+}
