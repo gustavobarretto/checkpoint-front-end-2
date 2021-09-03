@@ -23,8 +23,7 @@
                 <img src="./img/hat.png" alt=""> 
             </div>
             <div class="search">
-                <input type="text" name="" id="" />
-                <a href=""><i class="fas fa-search"></i></a>
+                <input type="text" name="" id="" /><a href=""><i class="fas fa-search"></i></a>
             </div>
        </section>
        <nav>
@@ -48,33 +47,34 @@
        <div class="container">
            <form>
                <h2>Cadastre sua receita:</h2>
-               <label for=""><span>Categoria:</span>
-                <select name="" id="">
-                    <option selected disabled value>Selecione</option>
-                    <option value="">Bolos e Tortas</option>
-                    <option value="">Carnes</option>
-                    <option value="">Massas</option>
-                    <option value="">Frutos do mar</option>
-                    <option value="">Sopas</option>
-                    <option value="">Saladas</option>
-                    <option value="">Doces</option>
-                    <option value="">Vegetariano</option>
-                    <option value="">Vegano</option>                    
-                    <option value="">Outros</option>                    
+                <select name="" id="option">
+                    <option selected disabled value>CATEGORIA</option>
+                    <option value="Bolos e Tortas">Bolos e Tortas</option>
+                    <option value="Carnes">Carnes</option>
+                    <option value="Massas">Massas</option>
+                    <option value="Frutos do mar">Frutos do mar</option>
+                    <option value="Sopas">Sopas</option>
+                    <option value="Saladas">Saladas</option>
+                    <option value="Doces">Doces</option>
+                    <option value="Vegetariano">Vegetariano</option>
+                    <option value="Vegano">Vegano</option>                    
+                    <option value="Outros">Outros</option>                    
                 </select>
                </label>
-               <label for=""><span>Autor:</span><input type="text"></label>
-               <label for=""><span>Título da Receita:</span><input type="text"></label>
-               <label for=""><span>Foto da receita:</span><input type="text"></label>
-               <label class ='receita'for=""><span class='ingredientes-texto'>Ingredientes e forma de preparo:</span><textarea name="" id="" cols="30" rows="10"></textarea></label>
+               <input id='autor' type="text" placeholder="AUTOR" >
+               <input id='titulo' type="text" placeholder="TÍTULO">
+               <input id='link' type="text" placeholder="LINK DO VÍDEO">
+               <textarea id='texto' placeholder="INGREDIENTES E MODO DE PREPARO" name="" id="" cols="30" rows="10"></textarea></label>
                <div class="send-cancel">
-                   <button type='submit'>Enviar</button>
-                   <button type='clear'>Limpar</button>
+                   <button class='submit' type='submit'>Enviar</button>
+                   <button class='clear' type='clear'>Limpar</button>
                </div>
            </form>
 
+           <h3>Categoria</h3>
+
            <div class='imagem'>
-               <img src="https://cdn.discordapp.com/attachments/882253065011490866/882616638950748201/1-image-placeholder-how-to-wireframe-pdf.png" alt="">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/7fzeJI96_S0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam nostrum molestiae 
                    cupiditate ea non inventore autem veritatis, 
                    quae nisi incidunt? Aut magni rerum voluptate? Laborum illo architecto 
@@ -118,6 +118,6 @@
     </div>
    </footer>
 
-
+    <script src='./js/app.js'></script>
 </body>
 </html>

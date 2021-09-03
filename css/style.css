@@ -26,7 +26,6 @@ header {
 .logo {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     font-size: 2rem;
     color: rgb(15, 15, 15);
     letter-spacing: 1px;
@@ -34,7 +33,15 @@ header {
 .logo img {
     width: 4vw;
     height: 8vh;
+    align-self:flex-end;
 }
+
+.logo h1 {
+    align-self: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
 .search {
     margin-left: 15vw; /* não sei se estou usando essas medidas da maneira correta */
     
@@ -42,7 +49,17 @@ header {
 .search input {
     color: white;
     border-bottom: solid 1px white;
+    background-color: inherit;
 }
+
+.search input:focus {
+    border:inherit;
+    border-radius: inherit;
+    border-bottom: solid 1px white;
+    text-align: start;
+    
+}
+
 .search a {
     color: white;
 }
@@ -79,6 +96,7 @@ footer {
     bottom: 0;
     width: 100vw;
     display: flex;
+    padding-top: 25px;
     justify-content: space-evenly;
 }
 .footer-content {
@@ -145,7 +163,7 @@ form {
 
     margin: 3.2rem;
     padding: 1.6rem;
-    border-radius: 5px;
+    border-radius: 20px;
     
 
     display: flex;
@@ -164,41 +182,34 @@ form h2 {
 
 select {
     border-style: none;
-    border: solid 1px #BF4D0B;
     width: 30vw;
     margin-top: 0.8rem;
-    padding: .4rem;
+    padding: .9rem;
     border-radius: 5px;
-    background-color: rgb(226, 223, 223);
+    background-color: #F2F2F2;
     border-color: none;
     color: #301318;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
+    text-align: center;
     
 }
 
 select:focus {
     outline-style: none;
-}
-
-label {
-    margin: 0.8rem;
-    display: flex;
-    flex-direction: column;
-    font-weight: 600;
-    font-size: 1.5vw;
-    color: #301318;
+    border-color: #B5BF69;
+    border: solid 1px #B5BF69
 }
 
 input {
     border: none;
-    border-bottom: solid 1px #BF4D0B;
+    background-color: #F2F2F2;
     width: 30vw;
-    background-color: inherit;
     outline-style: none;
-    margin-top: 0.8rem;
-    padding: 0.2rem;
+    margin-top: 1rem;
+    padding: 0.9rem;
     font-weight: 500;
     font-size: 1.2vw;
+    text-align: center;
     
 }
 
@@ -218,19 +229,23 @@ input:focus {
 
 textarea {
     resize: none;
-    background-color: inherit;
     border-radius: 5px;
-    outline-style: none;
     width: 30vw;
     padding: 0.4rem;
-    border-color: #BF4D0B;
     font-weight: 500;
     font-size: 1.2vw;
+    border: 0;
+    margin: 1rem;
+    background-color: #F2F2F2;
+    text-align: center;
+    
 
 }
 
 textarea:focus {
-    
+    outline-style: none;
+    border-color: #B5BF69;
+    border: solid 1px #B5BF69;
     font-style: italic;
     font-weight: 500;
 }
@@ -239,10 +254,10 @@ textarea:focus {
 button {
     margin: 1.2rem;
     padding: 0.6rem;
-    width: 7vw;
+    width: 9vw;
     background-color: #BF4D0B;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     color: #F2F2F2;
     font-size: 1.5vw
 }
@@ -280,7 +295,7 @@ button:hover {
 /* de 280 a 640px */
 
 
-@media (min-width: 280px) and (max-width: 639px) {
+@media (min-width: 280px) and (max-width: 640px) {
     
     header {
         width: 100vw;
@@ -298,22 +313,31 @@ button:hover {
         padding: 3vw;
         display: flex;
         flex-wrap: wrap;
+        box-shadow: .5px .5px #f28b50;
     }
     .menu-item {
         padding: 0.5rem;
     }
 
+    .container {
+        background-color: white;
+    }
+
+    .imagem {
+        background-color: white;
+    }
+
+
+
     form {
         width: 100vw;
         border-radius: 0;
         padding-top: 0;
-
-        
+   
     }
 
     form h2 {
         font-size: 6vw;
-        margin-top: 1rem;
     }
 
     label, input {
@@ -332,12 +356,13 @@ button:hover {
     textarea {
         width: 70vw;
         height: 20vh;
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     button {
         font-size: 4vw;
         width: 20vw;
+        border-radius: 5px;
     }
 
 
@@ -390,6 +415,11 @@ button:hover {
         padding: 0.7rem;
     }
 
+    ul .menu {
+        padding-bottom: 100px;
+
+    }
+
     form {
         width: 70vw;
     }
@@ -436,164 +466,3 @@ button:hover {
 
 }
 
-@media (min-width: 1366px) and (max-width: 1920px) {
-    header {
-        top: 0px;
-        width: 100vw;
-        
-    }
-    
-    footer {
-        padding: 60px;
-        width: 100vw;
-        display: flex;
-    }
-    
-    .container {
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    
-    /* Formulário */
-    
-    form {
-        background-color: white;
-        width: 35vw;
-    
-        margin: 3.2rem;
-        padding: 1.6rem;
-        border-radius: 5px;
-        
-    
-        display: flex;
-        flex-direction: column;
-    
-        align-items: center;
-    
-    }
-    
-    form h2 {
-        margin-top: 1rem;
-        margin-bottom: 4rem;
-        font-size: 1.8vw;
-        color: #301318;
-    }
-    
-    select {
-        border-style: none;
-        border: solid 1px #BF4D0B;
-        width: 25vw;
-        margin-top: 0.8rem;
-        padding: .4rem;
-        border-radius: 5px;
-        border-color: #BF4D0B;
-        color: #301318;
-        font-size: 1vw;
-        
-    }
-    
-    select:focus {
-        outline-style: none;
-    }
-    
-    label {
-        margin: 0.8rem;
-        display: flex;
-        flex-direction: column;
-        font-weight: 600;
-        font-size: 1vw;
-        color: #301318;
-    }
-    
-    input {
-        border: none;
-        border-bottom: solid 1px #BF4D0B;
-        width: 25vw;
-        background-color: inherit;
-        outline-style: none;
-        margin-top: 0.8rem;
-        padding: 0.2rem;
-        font-weight: 500;
-        font-size: 1.2vw;
-        
-    }
-    
-    input:focus {
-        border-color: #B5BF69;
-        border: solid 1px #B5BF69;
-        border-radius: 5px;
-        font-style: italic;
-        font-weight: 500;
-        letter-spacing: .05rem;
-    }
-    
-    .ingredientes-texto {
-        margin-bottom: 0.8rem;
-        margin-top: 1rem;
-    }
-    
-    textarea {
-        resize: none;
-        background-color: inherit;
-        border-radius: 5px;
-        outline-style: none;
-        width: 25vw;
-        padding: 0.4rem;
-        border-color: #BF4D0B;
-        font-weight: 500;
-        font-size: 1vw;
-    
-    }
-    
-    textarea:focus {
-        
-        font-style: italic;
-        font-weight: 500;
-    }
-    
-    
-    button {
-        margin: 1.2rem;
-        padding: 0.6rem;
-        width: 7vw;
-        background-color: #BF4D0B;
-        border: none;
-        border-radius: 5px;
-        color: #F2F2F2;
-        font-size: 1vw
-    }
-    
-    button:hover {
-        background-color:#B5BF69;
-        color: #a34d1b ;
-    }
-    
-    /* Estrutura da imagem a aparecer mediante js */
-    
-    .imagem {
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    
-    }
-    
-    .imagem img {
-        margin: 1.6rem;
-        max-width: 50vw;
-    }
-    
-    .imagem p {
-        width: 40vw;
-        margin: 1.6rem auto;
-        font-weight: 600;
-        font-size: 1.5vw;
-        padding: 1rem;
-        
-        justify-self: center;
-    
-    }
-}
