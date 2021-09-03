@@ -8,39 +8,128 @@
 /* Tamanhos padrões de header, footer e container */
 
 
-
+/* -----------------HEADER---------------- */
 header {
-    background-color: #F2F2F2;
+    background-color: #f28b50;
     top: 0px;
-    height: 15vh;
     width: 100vw;
     display: flex;
-
+    flex-direction: column;
+}
+.navegador {
+    background-color: #f28b50;
+    margin-top: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.logo {
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content:flex-end;
-
+    font-size: 2rem;
+    color: rgb(15, 15, 15);
+    letter-spacing: 1px;
 }
-
-header h1 {
-    padding-right: 20px;
-}
-
-header img {
+.logo img {
     width: 4vw;
     height: 8vh;
-    margin-right: 25px;
-
+}
+.search {
+    margin-left: 15vw; /* não sei se estou usando essas medidas da maneira correta */
+    
+}
+.search input {
+    color: white;
+    border-bottom: solid 1px white;
+}
+.search a {
+    color: white;
+}
+/* ........................... */
+.menu {
+    background-color: white;
+    width: 100vw;
+    height: 8vh;
+    padding: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+.menu-item {
+    padding: 0 15px;
+}
+.menu a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(15, 15, 15);
+    letter-spacing: 1px;
+}
+.categorias-links {
+    display: flex;
+    flex-direction: row;
 }
 
+
+/* ----------------FOOTER---------------- */
 footer {
-    background-color: #817f7f;
-    padding: 60px;
+    background-color: #ac4509;
+    bottom: 0;
     width: 100vw;
     display: flex;
+    justify-content: space-evenly;
+}
+.footer-content {
+    /* max-width: 600px; */
+}
+/* .............links do footer .............. */
+.user-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 15px;  
+}
+.user-links > li {
+    list-style: none;
+    margin-bottom: 10px;
+    flex-basis: 30%;
+    text-align: center;
+}
+.user-links > li > a {
+    text-decoration: none;
+    color: #f2f2f2;
+    font-weight: 00;
+}
+.user-links > li > a:hover {
+    text-decoration: underline;
+}
+/*...........ícones do footer............ */
+.icones-footer {
+    display: flex;
+    justify-content: center;
+
+}
+.icones-footer i {
+    color: #e8e8e8;
+    font-size: 2rem;
+    margin-right: 7px;
+    flex-basis: 30%;
+}
+/*.............cabeçalho...............  */
+.cabecalho {
+    margin-top: 5vh;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-style: italic;
 }
 
+/* -------------------CONTAINER---------------- */
 .container {
-    background-color: #f2aa80;
+    background-color: #f2f2f2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,7 +169,8 @@ select {
     margin-top: 0.8rem;
     padding: .4rem;
     border-radius: 5px;
-    border-color: #BF4D0B;
+    background-color: rgb(226, 223, 223);
+    border-color: none;
     color: #301318;
     font-size: 1.5vw;
     
@@ -165,7 +255,7 @@ button:hover {
 /* Estrutura da imagem a aparecer mediante js */
 
 .imagem {
-    background-color: #f2aa80;
+    background-color: #f2f2f2;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -193,8 +283,24 @@ button:hover {
 @media (min-width: 280px) and (max-width: 639px) {
     
     header {
-        padding: 25px;
-
+        width: 100vw;
+    }
+    .logo {
+        display: none;
+    }
+    .search {
+        width:100vw;
+        /* trazer o search para o meio */
+    }
+    .menu {
+        width: 100vw;
+        height: 20vh;
+        padding: 3vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu-item {
+        padding: 0.5rem;
     }
 
     form {
@@ -207,6 +313,7 @@ button:hover {
 
     form h2 {
         font-size: 6vw;
+        margin-top: 1rem;
     }
 
     label, input {
@@ -233,11 +340,7 @@ button:hover {
         width: 20vw;
     }
 
-    .container {
-        background-color: white;
 
-        
-    }
 
     .imagem img {
         width: 100vw;
@@ -253,6 +356,7 @@ button:hover {
 
     footer {
         padding: 25px;
+        
     }
    
 }
@@ -261,7 +365,29 @@ button:hover {
 
 @media (min-width: 640px) and (max-width: 1024px) {
     header {
-        padding: 40px;
+        width: 100vw;
+    }
+    .logo {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .logo img {
+        width: 7vw;
+        height: 7vh;
+    }
+    .search {
+        margin-left: 15vw; /* não sei se estou usando essas medidas da maneira correta */
+        
+    }
+    .menu {
+        width: 100vw;
+        height: 10vh;
+        padding: 3vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu-item {
+        padding: 0.7rem;
     }
 
     form {
@@ -299,26 +425,32 @@ button:hover {
         font-size: 2.5vw;
     }
 
+    /* footer */
+    .footer-content {
+        margin-top: 15px;       
+    }
+    .cabecalho {
+        margin-bottom: 15px;
+    }
+
 
 }
 
 @media (min-width: 1366px) and (max-width: 1920px) {
     header {
-        background-color: #F2F2F2;
         top: 0px;
         width: 100vw;
         
     }
     
     footer {
-        background-color: #817f7f;
         padding: 60px;
         width: 100vw;
         display: flex;
     }
     
     .container {
-        background-color: #f2aa80;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -442,7 +574,6 @@ button:hover {
     /* Estrutura da imagem a aparecer mediante js */
     
     .imagem {
-        background-color: #f2aa80;
         width: 100vw;
         display: flex;
         flex-direction: column;
