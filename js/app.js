@@ -1,3 +1,5 @@
+// Adicionando informações na página
+
 const enviarInfo = () => {
     
     const categoria = document.createElement('h2')

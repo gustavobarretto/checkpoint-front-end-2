@@ -47,7 +47,7 @@
        <div class="container">
            <form action="index.html?#">
                <h2>Cadastre sua receita:</h2>
-                <select name="" id="option">
+                <select required name="" id="option">
                     <option selected disabled value>CATEGORIA</option>
                     <option value="Bolos e Tortas">Bolos e Tortas</option>
                     <option value="Carnes">Carnes</option>
@@ -61,10 +61,10 @@
                     <option value="Outros">Outros</option>                    
                 </select>
                </label>
-               <input id='autor' type="text" placeholder="AUTOR" >
-               <input id='titulo' type="text" placeholder="TÍTULO">
-               <input id='link' type="text" placeholder="LINK DO VÍDEO">
-               <textarea id='texto' placeholder="INGREDIENTES E MODO DE PREPARO" name="" id="" cols="30" rows="10"></textarea></label>
+               <input required id='autor' type="text" placeholder="AUTOR" >
+               <input required id='titulo' type="text" placeholder="TÍTULO">
+               <input required id='link' type="text" placeholder="LINK DO VÍDEO">
+               <textarea required id='texto' placeholder="INGREDIENTES E MODO DE PREPARO" name="" id="" cols="30" rows="10"></textarea></label>
                <div class="send-cancel">
                    <button class='submit' type='submit'>Enviar</button>
                    <button class='clear' type='clear'>Limpar</button>
