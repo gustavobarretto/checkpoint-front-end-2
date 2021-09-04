@@ -1,4 +1,4 @@
-const enviarInfo = (info) => {
+const enviarInfo = () => {
     
     const categoria = document.createElement('h2')
     categoria.textContent = document.getElementById('option').value
