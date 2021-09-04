@@ -1,5 +1,4 @@
-
-const enviarInfo = () => {
+const enviarInfo = (info) => {
     
     const categoria = document.createElement('h2')
     categoria.textContent = document.getElementById('option').value
@@ -22,7 +21,7 @@ const enviarInfo = () => {
     texto.textContent = document.getElementById('texto').value
     document.querySelector('[class=imagem]').appendChild(texto)
 
-
 }
 
-document.querySelector('[class=submit]').addEventListener('click', enviarInfo)
+document.querySelector('form').addEventListener('submit', enviarInfo)
+
