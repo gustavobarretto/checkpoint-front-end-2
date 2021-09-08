@@ -5,10 +5,8 @@
     font-family: 'Roboto';
 }
 
-/* Tamanhos padrões de header, footer e container */
-
-
 /* -----------------HEADER---------------- */
+
 header {
     background-color: #f28b50;
     top: 0px;
@@ -16,6 +14,7 @@ header {
     display: flex;
     flex-direction: column;
 }
+
 .navegador {
     background-color: #f28b50;
     margin-top: 15px;
@@ -23,6 +22,7 @@ header {
     display: flex;
     justify-content: space-evenly;
 }
+
 .logo {
     display: flex;
     justify-content: space-evenly;
@@ -30,6 +30,7 @@ header {
     color: rgb(15, 15, 15);
     letter-spacing: 1px;
 }
+
 .logo img {
     width: 4vw;
     height: 8vh;
@@ -43,9 +44,9 @@ header {
 }
 
 .search {
-    margin-left: 15vw; /* não sei se estou usando essas medidas da maneira correta */
-    
+    margin-left: 15vw;    
 }
+
 .search input {
     color: white;
     border-bottom: solid 1px white;
@@ -56,14 +57,15 @@ header {
     border:inherit;
     border-radius: inherit;
     border-bottom: solid 1px white;
-    text-align: start;
-    
+    text-align: start;    
 }
 
 .search a {
     color: white;
 }
-/* ........................... */
+
+/* ....menu.... */
+
 .menu {
     background-color: white;
     width: 100vw;
@@ -74,9 +76,11 @@ header {
     justify-content: center;
     list-style: none;
 }
+
 .menu-item {
     padding: 0 15px;
 }
+
 .menu a {
     text-decoration: none;
     font-size: 16px;
@@ -84,68 +88,14 @@ header {
     color: rgb(15, 15, 15);
     letter-spacing: 1px;
 }
+
 .categorias-links {
     display: flex;
     flex-direction: row;
 }
 
-
-/* ----------------FOOTER---------------- */
-footer {
-    background-color: #ac4509;
-    bottom: 0;
-    width: 100vw;
-    display: flex;
-    padding-top: 25px;
-    justify-content: space-evenly;
-}
-.footer-content {
-    /* max-width: 600px; */
-}
-/* .............links do footer .............. */
-.user-links {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 15px;  
-}
-.user-links > li {
-    list-style: none;
-    margin-bottom: 10px;
-    flex-basis: 30%;
-    text-align: center;
-}
-.user-links > li > a {
-    text-decoration: none;
-    color: #f2f2f2;
-    font-weight: 00;
-}
-.user-links > li > a:hover {
-    text-decoration: underline;
-}
-/*...........ícones do footer............ */
-.icones-footer {
-    display: flex;
-    justify-content: center;
-
-}
-.icones-footer i {
-    color: #e8e8e8;
-    font-size: 2rem;
-    margin-right: 7px;
-    flex-basis: 30%;
-}
-/*.............cabeçalho...............  */
-.cabecalho {
-    margin-top: 5vh;
-    text-align: center;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 600;
-    font-style: italic;
-}
-
 /* -------------------CONTAINER---------------- */
+
 .container {
     background-color: #f2f2f2;
     display: flex;
@@ -155,22 +105,17 @@ footer {
     width: 100vw;
 }
 
-/* Formulário */
+/*------------FORMULÁRIO------------- */
 
 form {
     background-color: white;
     width: 40vw;
-
     margin: 3.2rem;
     padding: 1.6rem;
     border-radius: 20px;
-    
-
     display: flex;
     flex-direction: column;
-
     align-items: center;
-
 }
 
 form h2 {
@@ -185,13 +130,12 @@ select {
     width: 30vw;
     margin-top: 0.8rem;
     padding: .9rem;
-    border-radius: 5px;
+    border-radius: 15px;
     background-color: #F2F2F2;
     border-color: none;
     color: #301318;
     font-size: 1.2vw;
-    text-align: center;
-    
+    text-align: center;    
 }
 
 select:focus {
@@ -202,6 +146,7 @@ select:focus {
 
 input {
     border: none;
+    border-radius: 15px;
     background-color: #F2F2F2;
     width: 30vw;
     outline-style: none;
@@ -209,14 +154,12 @@ input {
     padding: 0.9rem;
     font-weight: 500;
     font-size: 1.2vw;
-    text-align: center;
-    
+    text-align: center;    
 }
 
 input:focus {
     border-color: #B5BF69;
     border: solid 1px #B5BF69;
-    border-radius: 5px;
     font-style: italic;
     font-weight: 500;
     letter-spacing: .05rem;
@@ -229,7 +172,7 @@ input:focus {
 
 textarea {
     resize: none;
-    border-radius: 5px;
+    border-radius: 15px;
     width: 30vw;
     padding: 0.4rem;
     font-weight: 500;
@@ -237,9 +180,7 @@ textarea {
     border: 0;
     margin: 1rem;
     background-color: #F2F2F2;
-    text-align: center;
-    
-
+    text-align: center;  
 }
 
 textarea:focus {
@@ -249,7 +190,6 @@ textarea:focus {
     font-style: italic;
     font-weight: 500;
 }
-
 
 button {
     margin: 1.2rem;
@@ -267,46 +207,112 @@ button:hover {
     color: #a34d1b ;
 }
 
-/* Estrutura da imagem a aparecer mediante js */
+/*.... estrutura do card.... */
 
-.imagem {
-    background-color: #f2f2f2;
+.card {
+    background-color: white;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 40vw;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+}
+
+.video {
+    margin-bottom: .5rem;
+    width: 100%;
+    height: 315px;
+}
+
+.card-label {
+    font-weight:700;
+    font-size: 1.2rem;
+    margin-bottom: .2rem;
+}
+.card-content {
+    margin-bottom: 0.5rem;
+    word-wrap: break-word;
+}
+
+/* ----------------FOOTER---------------- */
+footer {
+    background-color: #ac4509;
+    bottom: 0;
     width: 100vw;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    padding-top: 25px;
+    justify-content: space-evenly;
 }
 
-.imagem img {
-    margin: 1.6rem;
-    width: 50vw;
+/* ....links do footer .... */
+
+.user-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 15px;  
 }
 
-.imagem p {
-    width: 50vw;
-    margin: 1.6rem auto;
-    font-weight: 600;
-    font-size: 1.5vw;
-
+.user-links > li {
+    list-style: none;
+    margin-bottom: 10px;
+    flex-basis: 30%;
+    text-align: center;
 }
 
+.user-links > li > a {
+    text-decoration: none;
+    color: #f2f2f2;
+    font-weight: 00;
+}
 
-/* de 280 a 640px */
+.user-links > li > a:hover {
+    text-decoration: underline;
+}
 
+/*....ícones do footer....*/
 
+.icones-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.icones-footer i {
+    color: #e8e8e8;
+    font-size: 2rem;
+    margin-right: 7px;
+    flex-basis: 30%;
+}
+
+/*....cabeçalho....*/
+
+.cabecalho {
+    margin-top: 5vh;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* ---------------MEDIA QUERIES-------------- */
+
+/*....de 280 a 640px.... */
 @media (min-width: 280px) and (max-width: 640px) {
     
     header {
         width: 100vw;
     }
+
     .logo {
         display: none;
     }
+
     .search {
         width:100vw;
         /* trazer o search para o meio */
     }
+
     .menu {
         width: 100vw;
         height: 20vh;
@@ -315,6 +321,7 @@ button:hover {
         flex-wrap: wrap;
         box-shadow: .5px .5px #f28b50;
     }
+
     .menu-item {
         padding: 0.5rem;
     }
@@ -327,13 +334,12 @@ button:hover {
         background-color: white;
     }
 
-
+    /* formulario */
 
     form {
         width: 100vw;
         border-radius: 0;
-        padding-top: 0;
-   
+        padding-top: 0;   
     }
 
     form h2 {
@@ -365,8 +371,6 @@ button:hover {
         border-radius: 5px;
     }
 
-
-
     .imagem img {
         width: 100vw;
     }
@@ -376,34 +380,37 @@ button:hover {
         margin: 0;
         width: 95vw;
         margin-bottom: 20px;
-
     }
+
+    /*....footer....*/
 
     footer {
-        padding: 25px;
-        
-    }
-   
+        padding: 25px;        
+    }   
 }
 
-/* Media Queries de 640 a 1024px */
+/* 640 a 1024px */
 
 @media (min-width: 640px) and (max-width: 1024px) {
+    
     header {
         width: 100vw;
     }
+
     .logo {
         display: flex;
         justify-content: space-evenly;
     }
+
     .logo img {
         width: 7vw;
         height: 7vh;
     }
+
     .search {
-        margin-left: 15vw; /* não sei se estou usando essas medidas da maneira correta */
-        
+        margin-left: 15vw;        
     }
+
     .menu {
         width: 100vw;
         height: 10vh;
@@ -411,14 +418,16 @@ button:hover {
         display: flex;
         flex-wrap: wrap;
     }
+
     .menu-item {
         padding: 0.7rem;
     }
 
     ul .menu {
         padding-bottom: 100px;
-
     }
+
+    /*....formulario....*/
 
     form {
         width: 70vw;
@@ -443,9 +452,7 @@ button:hover {
     button {
         width: 15vw;
         font-size: 2vw;
-
     }
-
 
     .imagem img {
         width: 100vw;
@@ -456,13 +463,13 @@ button:hover {
     }
 
     /* footer */
+
     .footer-content {
         margin-top: 15px;       
     }
+
     .cabecalho {
         margin-bottom: 15px;
     }
-
-
 }
 
