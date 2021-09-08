@@ -1,123 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkpoint-1</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <script
-    src="https://kit.fontawesome.com/ecae119fbf.js"
-    crossorigin="anonymous"
-></script>
-</head>
-<body>
-   <!-- header -->
-   <header>
-       <section class="navegador">
-            <div class="logo">
-                <h1>Título</h1>
-                <img src="./img/hat.png" alt=""> 
-            </div>
-            <div class="search">
-                <input type="text" name="" id="" /><a href=""><i class="fas fa-search"></i></a>
-            </div>
-       </section>
-       <nav>
-            <ul class="menu">
-                <li class="menu-item"><a href="#">Bolos e Tortas</a></li>
-                <li class="menu-item"><a href="#">Carnes</a></li>
-                <li class="menu-item"><a href="#">Massas</a></li>
-                <li class="menu-item"><a href="#">Frutos do mar</a></li>
-                <li class="menu-item"><a href="#">Sopas</a></li>
-                <li class="menu-item"><a href="#">Saladas</a></li>
-                <li class="menu-item"><a href="#">Doces</a></li>
-                <li class="menu-item"><a href="#">Vegetariano</a></li>
-                <li class="menu-item"><a href="#">Vegano</a></li>
-                <li class="menu-item"><a href="#">Outros</a></li>
-            </ul>
-       </nav>
-   </header>
+      src="https://kit.fontawesome.com/ecae119fbf.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <section class="navegador">
+        <div class="logo">
+          <h1>Título</h1>
+          <img src="./img/hat.png" alt="" />
+        </div>
+        <div class="search">
+          <input type="text" name="" id="" /><a href=""
+            ><i class="fas fa-search"></i
+          ></a>
+        </div>
+      </section>
+      <nav>
+        <ul class="menu">
+          <li class="menu-item"><a href="#">Bolos e Tortas</a></li>
+          <li class="menu-item"><a href="#">Carnes</a></li>
+          <li class="menu-item"><a href="#">Massas</a></li>
+          <li class="menu-item"><a href="#">Frutos do mar</a></li>
+          <li class="menu-item"><a href="#">Sopas</a></li>
+          <li class="menu-item"><a href="#">Saladas</a></li>
+          <li class="menu-item"><a href="#">Doces</a></li>
+          <li class="menu-item"><a href="#">Vegetariano</a></li>
+          <li class="menu-item"><a href="#">Vegano</a></li>
+          <li class="menu-item"><a href="#">Outros</a></li>
+        </ul>
+      </nav>
+    </header>
 
-   <!-- main -->
-   <main>
-       <div class="container">
-           <form action="index.html?#">
-               <h2>Cadastre sua receita:</h2>
-                <select required name="" id="option">
-                    <option selected disabled value>CATEGORIA</option>
-                    <option value="Bolos e Tortas">Bolos e Tortas</option>
-                    <option value="Carnes">Carnes</option>
-                    <option value="Massas">Massas</option>
-                    <option value="Frutos do mar">Frutos do mar</option>
-                    <option value="Sopas">Sopas</option>
-                    <option value="Saladas">Saladas</option>
-                    <option value="Doces">Doces</option>
-                    <option value="Vegetariano">Vegetariano</option>
-                    <option value="Vegano">Vegano</option>                    
-                    <option value="Outros">Outros</option>                    
-                </select>
-               </label>
-               <input required id='autor' type="text" placeholder="AUTOR" >
-               <input required id='titulo' type="text" placeholder="TÍTULO">
-               <input required id='link' type="text" placeholder="LINK DO VÍDEO">
-               <textarea required id='texto' placeholder="INGREDIENTES E MODO DE PREPARO" name="" id="" cols="30" rows="10"></textarea></label>
-               <div class="send-cancel">
-                   <button class='submit' type='submit'>Enviar</button>
-                   <button class='clear' type='reset'>Limpar</button>
-               </div>
-           </form>
+    <!-- main -->
+    <main>
+      <div class="container">
+        <form id="form-receita" onsubmit="return addCard();">
+          <h2>Cadastre sua receita:</h2>
+          <select id="categoria">
+            <option selected disabled value>CATEGORIA</option>
+            <option value="Bolos e Tortas">Bolos e Tortas</option>
+            <option value="Carnes">Carnes</option>
+            <option value="Massas">Massas</option>
+            <option value="Frutos do mar">Frutos do mar</option>
+            <option value="Sopas">Sopas</option>
+            <option value="Saladas">Saladas</option>
+            <option value="Doces">Doces</option>
+            <option value="Vegetariano">Vegetariano</option>
+            <option value="Vegano">Vegano</option>
+            <option value="Outros">Outros</option>
+          </select>
+          <input id="autor" type="text" placeholder="AUTOR" />
+          <input id="titulo" type="text" placeholder="TÍTULO" />
+          <input id="link" type="text" placeholder="LINK DO VÍDEO" />
+          <textarea
+            id="receita"
+            placeholder="INGREDIENTES E MODO DE PREPARO"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <div class="send-cancel">
+            <button type="reset">Limpar</button>
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
 
-           <h3>Categoria</h3>
+        <h3>Receitas</h3>
+        <!-- criando a estrutura do card/ estrutura para ser feita em js -->
+        <div id="cards-receitas">          
+          <!-- <div class="card">
+            <iframe class="video"
+            src="https://www.youtube.com/embed/7fzeJI96_S0"
+          ></iframe>
+            <p class="card-label">Categoria:<p>
+            <p class="card-content">Carnes</p>
+            <p class="card-label">Autor:</p>
+            <p class="card-content">Tânia</p>
+            <p class="card-label">Título:</p>
+            <p class="card-content">Bolo de Carne</p>
+            <p class="card-label">Receita:</p>
+            <p class="card-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolore. Distinctio, 
+              laudantium eligendi perspiciatis corporis repellat praesentium nobis hic doloribus vitae at, illo saepe maxime. 
+              Sequi, quidem? Quam, debitis? Consequatur?</p>
+          </div> -->
+        </div>
+      </div>
+    </main>
 
-           <div class='imagem'>
-               <iframe width="560" height="315" src="https://www.youtube.com/embed/7fzeJI96_S0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam nostrum molestiae 
-                   cupiditate ea non inventore autem veritatis, 
-                   quae nisi incidunt? Aut magni rerum voluptate? Laborum illo architecto 
-                   nam quidem itaque.</p>
-           </div>
-
-       </div>
-   </main>
-
-   <!-- footer -->
-   <footer>
-    <div class="footer-content">
-         <ul class="user-links">
-             <li>
-                 <a href="#">lorem  dolor sit</a>
-             </li>
-             <li> 
-                 <a href="#">ipsum dolor sit</a>
-             </li>
-             <li>
-                 <a href="">lorem ipsum </a> 
-             </li>
-             <li>
-                 <a href="">lorem  dolor sit</a> 
-             </li>
-             <li>
-                 <a href="">lorem ipsum </a> 
-             </li>
-             <li>
-                 <a href="">lorem  dolor sit</a> 
-             </li>
-         </ul>
-         <div class="icones-footer">
-            <a href="https://pt-br.facebook.com/"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
-            <a href="https://br.pinterest.com/"><i class="fab fa-pinterest-square"></i></a>
+    <!-- footer -->
+    <footer>
+      <div class="footer-content">
+        <ul class="user-links">
+          <li>
+            <a href="#">lorem dolor sit</a>
+          </li>
+          <li>
+            <a href="#">ipsum dolor sit</a>
+          </li>
+          <li>
+            <a href="">lorem ipsum </a>
+          </li>
+          <li>
+            <a href="">lorem dolor sit</a>
+          </li>
+          <li>
+            <a href="">lorem ipsum </a>
+          </li>
+          <li>
+            <a href="">lorem dolor sit</a>
+          </li>
+        </ul>
+        <div class="icones-footer">
+          <a href="https://pt-br.facebook.com/"
+            ><i class="fab fa-facebook-square"></i
+          ></a>
+          <a href="https://www.instagram.com/"
+            ><i class="fab fa-instagram-square"></i
+          ></a>
+          <a href="https://br.pinterest.com/"
+            ><i class="fab fa-pinterest-square"></i
+          ></a>
         </div>
         <div class="cabecalho">
-            <p>Bon Appetit!</p>   
-        </div> 
-    </div>
-   </footer>
+          <p>Bon Appetit!</p>
+        </div>
+      </div>
+    </footer>
 
-    <script src='./js/app.js'></script>
-</body>
+    <script src="./js/app.js"></script>
+  </body>
 </html>
