@@ -1,5 +1,8 @@
 # Checkpoint - Front-end 2
 
+## Membros do Grupo
+Tânia, Gustavo, Esther e Mariana.
+
 ## Objetivo
 
 Esta atividade tem como objetivo servir como primeiro instrumento avaliativo da disciplina. Fique atento às instruções e boa avaliação. O entregável será uma página em HTML5, CSS3 e Javascript seguindo os conteúdos ministrados até a aula 08.
