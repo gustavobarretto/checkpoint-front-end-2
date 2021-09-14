@@ -1,53 +1,8 @@
 // Adicionando informações na página
 
-// const enviarInfo = () => {
-    // const categoria = document.getElementById('option').value;
-    // const autor = document.getElementById('autor').value;
-    // const titulo = document.getElementById('titulo').value;
-    // const link = (document.getElementById('link').value).replace('watch?v=', 'embed/');
-
-    // const texto = document.getElementById('texto').value;
-
-    // document.querySelector('[class=imagem]').innerHTML +=
-    // `<h2>${categoria}</h2>
-    // <h3>${autor}</h3>
-    // <h3>${titulo}</h3>
-    // <iframe width="560" height="315" src="${link}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    // <p>${texto}</p>
-    // `
-
-//     const categoria = document.createElement('h2')
-//     categoria.textContent = document.getElementById('option').value
-//     document.getElementById('cards-receitas').appendChild(categoria)
-
-//     const autor = document.createElement('h3')
-//     autor.textContent = document.getElementById('autor').value
-//     document.getElementById('cards-receitas').appendChild(autor)
-    
-//     const titulo = document.createElement('h3')
-//     titulo.textContent = document.getElementById('titulo').value
-//     document.getElementById('cards-receitas').appendChild(titulo)
-    
-//     const link = document.createElement('a')
-//     link.setAttribute('href', document.getElementById('link').value)
-//     link.textContent = 'Link da Receita'
-//     document.getElementById('cards-receitas').appendChild(link)
-
-//     const texto = document.createElement('p')
-//     texto.textContent = document.getElementById('texto').value
-//     document.getElementById('cards-receitas').appendChild(texto)
-
-//    /* em vez de selecionar a div pela classe, passou-se a selecionar a div
-//    pelo id/ essa alteração foi feita pois a classe pode se repetir ao longo do html, 
-//    enquanto o id é único. */
-// }
-
-// document.querySelector('[class=submit]').addEventListener('click', enviarInfo)
-
-/* arrow function é anônima e por isso mais difícil de debugar;
-    a função regular aparece o nome dela no debugger */
-
 function addCard() {
+    
+    // criando a div
     const card = document.createElement('div');
     card.classList.add('card');
 
@@ -55,7 +10,7 @@ function addCard() {
     const iframe = document.createElement('iframe');
     iframe.classList.add('video');
     const inputLink = document.getElementById('link')
-    iframe.src = inputLink.value;
+    iframe.src = (inputLink.value).replace('watch?v=', 'embed/');
 
     //inserindo a "escolha" da categoria
     const labelCategoria = document.createElement('p');
@@ -67,7 +22,7 @@ function addCard() {
     const selectCategoria = document.getElementById('categoria');
     contentCategoria.textContent = selectCategoria.options[selectCategoria.selectedIndex].text; //"categorias" é uma lista.
 
-    //inserino o input do autor
+    //inserindo o input do autor
     const labelAutor = document.createElement('p');
     labelAutor.classList.add('card-label');
     labelAutor.textContent = 'Autor:';
@@ -97,7 +52,7 @@ function addCard() {
     const textareaReceita = document.getElementById('receita');
     contentReceita.textContent = textareaReceita.value;
    
-    //transformandoos objetos criados em filhos do objeto card
+    //transformando os objetos criados em filhos do objeto card
     card.appendChild(iframe);
     card.appendChild(labelCategoria);
     card.appendChild(contentCategoria);
@@ -110,7 +65,7 @@ function addCard() {
 
     document.getElementById('cards-receitas').appendChild(card);
 
-    document.getElementById('form-receita').reset() //reset é um método de formulário/ reseta o formulário depois de clicar no sbmit.
+    document.getElementById('form-receita').reset() //reset é um método de formulário/ reseta o formulário depois de clicar no submit.
 
     return false;
 }

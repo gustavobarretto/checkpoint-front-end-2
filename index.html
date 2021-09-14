@@ -52,7 +52,7 @@
       <div class="container">
         <form id="form-receita" onsubmit="return addCard();">
           <h2>Cadastre sua receita:</h2>
-          <select id="categoria">
+          <select required id="categoria">
             <option selected disabled value>CATEGORIA</option>
             <option value="Bolos e Tortas">Bolos e Tortas</option>
             <option value="Carnes">Carnes</option>
@@ -65,10 +65,11 @@
             <option value="Vegano">Vegano</option>
             <option value="Outros">Outros</option>
           </select>
-          <input id="autor" type="text" placeholder="AUTOR" />
-          <input id="titulo" type="text" placeholder="TÍTULO" />
-          <input id="link" type="text" placeholder="LINK DO VÍDEO" />
+          <input required id="autor" type="text" placeholder="AUTOR" />
+          <input required id="titulo" type="text" placeholder="TÍTULO" />
+          <input required id="link" type="text" placeholder="LINK DO VÍDEO" />
           <textarea
+            required
             id="receita"
             placeholder="INGREDIENTES E MODO DE PREPARO"
             cols="30"
